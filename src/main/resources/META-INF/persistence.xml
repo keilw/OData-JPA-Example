@@ -12,11 +12,13 @@
 		<class>com.synerzip.odata.model.SupplierParts</class>
 		<exclude-unlisted-classes>true</exclude-unlisted-classes>
 		<properties>
-			<property name="javax.persistence.jdbc.user" value="root" />
-			<property name="javax.persistence.jdbc.password" value="password" />
-			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/odataexample" />
-			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
+			<property name="javax.persistence.jdbc.driver" value="org.hsqldb.jdbcDriver" />
+			<property name="javax.persistence.jdbc.user" value="sa" />
+			<property name="javax.persistence.jdbc.password" value="" />
+			<property name="javax.persistence.jdbc.url" value="jdbc:hsqldb:mem:northwind;shutdown=true;ifexists=false" />
+			<property name="hibernate.dialect" value="org.hibernate.dialect.HSQLDialect" />
 			<property name="hibernate.max_fetch_depth" value="3" />
+			<property name="hibernate.hbm2ddl.auto" value="create-drop" />
 			<!-- property name="jboss.as.jpa.providerModule" value="hibernate3-bundled" 
 				/ -->
 			<property name="hibernate.show_sql" value="true" />
